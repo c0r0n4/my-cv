@@ -1,0 +1,49 @@
+//- data comes here
+-
+    var header = '#about me'
+    var imagePath = 'asset/image/myself.jpg'
+    var myFullName = "Teh Chai Chong"
+    var myTitle = "Rabbit Tamer"
+    var slogan = 'I change the future, one step at a time.'
+    var achievements = {
+        title: 'My Dream',
+        content: 'Comes True When I Grasp For It'
+    }
+    var coolStuff = {
+        title: 'Grab Cool Stuff',
+        buttonList: [
+            {
+                url: 'https://github.com/c0r0n4/my-cv',
+                icon: 'github',
+                label: 'Click to visit the GitHub project source'
+            },
+            {
+                url: 'asset/doc/Resume-TehChaiChong.docx',
+                icon: 'file-word',
+                label: 'Click to download the "one page" Microsoft Word version'
+            },
+            {
+                url: 'asset/doc/Resume-TehChaiChong.pdf',
+                icon: 'file-word',
+                label: 'Click to download the "one page" PDF version'
+            },
+        ]
+    }
+//- the view comes here
+#about-me
+.about-me
+    .about-me__header=header
+    .about-me__avatar-wrapper
+        img.about-me__avatar(src=imagePath)
+    .about-me__full-name=myFullName
+    .about-me__full-title=myTitle
+    .about-me__slogan=slogan
+    .about-me__title=achievements.title
+    .about-me__content=achievements.content
+
+    .about-me__title=coolStuff.title
+    .about-me__link-list
+        each button in coolStuff.buttonList
+            a(href=button.url)
+                span=button.label
+                span(class=`my-cv__icon--${button.icon}`)
