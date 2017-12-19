@@ -1,18 +1,16 @@
 .about-me {
-  background-image: radial-gradient(#8a8fa2, #415a67);
+  background-image: radial-gradient(ellipse, $color-geraldine, $color-terracotta);
 }
 
 .about-me__header {
-  color: white;
-  padding: 1rem 2rem;
-  font-size: 4rem;
-  margin-bottom: 1rem;
+  color: $color-white;
+  @extend %header;
 }
 
 .about-me__avatar {
   border-radius: 50%;
   width: 100%;
-  border: 0.5rem solid #e97568;
+  border: 0.5rem solid $color-terracotta;
 }
 
 .about-me__avatar-wrapper {
@@ -45,7 +43,7 @@
 .about-me__full-name,
 .about-me__full-title,
 .about-me__title {
-  color: white;
+  color: $color-white;
   padding: 0 1rem 2rem;
   text-align: center;
 }
@@ -67,10 +65,10 @@
   width: 80%;
   font-size: 3rem;
   text-decoration: none;
-  border: 0.3rem solid #7EA1A6;
+  border: 0.3rem solid $color-gumbo;
   border-radius: 1rem;
-  background-color: white;
-  color: #7EA1A6;
+  background-color: $color-white;
+  color: $color-gumbo;
   margin: 1rem auto;
   display: flex;
   justify-content: space-around;
